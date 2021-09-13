@@ -1,0 +1,31 @@
+package Entidades;
+
+public class Agenda {
+	
+	private int idMascota;
+	private String rutDueño;
+	private String nombreMascota;
+	private String hora ;
+	private String fecha;
+	
+	
+	
+	public void guardarAgenda() {
+		
+		 try {
+            String strSql  = "INSERT INTO Persona VALUES ('+idMascota+','"+rutDueño+"','"+nombreMascota+"','"+hora+"','"+fecha+"')";
+            
+            Conexion.conectar();
+            Conexion.sentencia = Conexion.con.prepareStatement(strSql);
+            Conexion.sentencia.execute(strSql);
+			 System.out.println("Datos Almasenados");
+			 Conexion.desconectar();
+			 
+			 
+		 } catch(Exception e) {
+			 System.out.println("Error metodo guardar  Agenda ");			 	 
+			 
+		 }
+	 }
+	
+}

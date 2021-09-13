@@ -1,0 +1,44 @@
+package Entidades;
+
+public class Mascota {
+
+	
+	private String tipoMascota;
+	private int edad;
+	private String nombreMascota;
+	
+	public Mascota(String tipoMascota, int edad, String nombreMascota) {
+	
+		
+		this.tipoMascota = tipoMascota;
+		this.edad = edad;
+		this.nombreMascota = nombreMascota;
+	
+	}
+	public String getTipoMascota() {
+		return tipoMascota;
+	}
+	public void setTipoMascota(String tipoMascota) {
+		this.tipoMascota = tipoMascota;
+	}
+	public int getEdad() {
+		return edad;
+	}
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+	public String getNombreMascota() {
+		return nombreMascota;
+	}
+	public void setNombreMascota(String nombreMascota) {
+		this.nombreMascota = nombreMascota;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Mascota [tipoMascota=" + tipoMascota + ", edad=" + edad + ", nombreMascota=" + nombreMascota + "]";
+	}
+	public void guardarMascota() {}
+
+}

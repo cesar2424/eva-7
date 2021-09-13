@@ -1,0 +1,86 @@
+package Entidades;
+
+public class Mascota {
+
+	
+	private String TipoMascota;
+	private int Edad;
+	private String NombreMascota;
+	
+	
+	
+	
+	public Mascota(String tipoMascota, int edad, String nombreMascota) {
+		
+		TipoMascota = tipoMascota;
+		Edad = edad;
+		NombreMascota = nombreMascota;
+	}
+
+
+
+
+	public String getTipoMascota() {
+		return TipoMascota;
+	}
+
+
+
+
+	public void setTipoMascota(String tipoMascota) {
+		TipoMascota = tipoMascota;
+	}
+
+
+
+
+	public int getEdad() {
+		return Edad;
+	}
+
+
+
+
+	public void setEdad(int edad) {
+		Edad = edad;
+	}
+
+
+
+
+	public String getNombreMascota() {
+		return NombreMascota;
+	}
+
+
+
+
+	public void setNombreMascota(String nombreMascota) {
+		NombreMascota = nombreMascota;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Mascota [TipoMascota=" + TipoMascota + ", Edad=" + Edad + ", NombreMascota=" + NombreMascota + "]";
+	}
+
+	public void guardarMascota() {
+		
+		 try {
+             String strSql  = "INSERT INTO Persona VALUES ('"+TipoMascota+"',"+Edad+",'"+NombreMascota+"')";
+             
+             Conexion.conectar();
+             Conexion.sentencia = Conexion.con.prepareStatement(strSql);
+             Conexion.sentencia.execute(strSql);
+			 System.out.println("Datos Almasenados");
+			 Conexion.desconectar();
+			 
+			 
+		 } catch(Exception e) {
+			 System.out.println("Error metodo guardar  Mascota ");			 	 
+			 
+		 }
+	 }
+}

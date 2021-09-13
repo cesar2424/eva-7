@@ -1,0 +1,56 @@
+package Entidades;
+
+public class Agenda {
+	
+
+	private String nombreMascota;
+	private String hora ;
+	private String Fecha;
+	
+	
+	public Agenda(String nombreMascota, String hora, String fecha) {
+	
+		this.nombreMascota = nombreMascota;
+		this.hora = hora;
+		Fecha = fecha;
+	}
+
+
+	public String getNombreMascota() {
+		return nombreMascota;
+	}
+
+
+	public void setNombreMascota(String nombreMascota) {
+		this.nombreMascota = nombreMascota;
+	}
+
+
+	public String getHora() {
+		return hora;
+	}
+
+
+	public void setHora(String hora) {
+		this.hora = hora;
+	}
+
+
+	public String getFecha() {
+		return Fecha;
+	}
+
+
+	public void setFecha(String fecha) {
+		Fecha = fecha;
+	}
+	
+	
+	
+	
+      
+	
+
+	
+
+}
